@@ -63,7 +63,7 @@ git push origin zaluby
 
 ## Alternatívna možnosť
 
-Ak z akéhokoľvek důvodu nemôžete pracovať s Git/GitHub:
+Ak z akéhokoľvek dôvodu nemôžete pracovať s Git/GitHub:
 
 1. Stiahnite si repozitár ako ZIP:
    - Kliknite na zelené tlačidlo **"Code"** → **"Download ZIP"**
