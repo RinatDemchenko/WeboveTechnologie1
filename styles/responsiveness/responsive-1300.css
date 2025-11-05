@@ -1,4 +1,28 @@
 /* ----------------------- Header a footer ----------------------- */
+.main-header {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.logo {
+  font-size: 1.2em;
+}
+
+.main-footer {
+  font-size: 0.9em;
+  padding: 15px;
+}
 
 
 /* ----------------------- Rozloženie ----------------------- */

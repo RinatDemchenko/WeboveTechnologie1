@@ -1,4 +1,25 @@
 /* ----------------------- Header a footer ----------------------- */
+.main-header {
+  padding: 20px 40px;
+}
+
+.logo {
+  font-size: 1.3em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-size: 1.1em;
+}
+
+.main-footer {
+  font-size: 1em;
+  padding: 20px;
+}
 
 
 /* ----------------------- Rozloženie ----------------------- */
