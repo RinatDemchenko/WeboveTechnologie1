@@ -1,32 +1,5 @@
 /* ----------------------- Header a footer ----------------------- */
-.main-header {
-  padding: 12px 20px;
-}
 
-.logo {
-  font-size: 1.1em;
-}
-
-.nav-links {
-  display: none;
-  flex-direction: column;
-  background-color: #222;
-  width: 100%;
-}
-
-.nav-links.active {
-  display: flex;
-}
-
-.menu-icon {
-  display: flex;
-}
-
-.main-footer {
-  text-align: center;
-  font-size: 0.85em;
-  padding: 12px;
-}
 
 
 /* ----------------------- Rozloženie ----------------------- */
