@@ -1,30 +1,31 @@
 /* ----------------------- CSS Reset (Nie je potrebné upravovať) ----------------------- */
-*{ 
+@import url("https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap");
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-body{
-  background-color: #FDF7F4;
+body {
+  background-color: #fdf7f4;
   min-height: 100vh;
 }
 
-body::before{
-  content: '';
-  pointer-events: none;
+body::before {
+  content: "";
+  z-index: -999;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #FDF7F4;
+  background-image: url("../assets/images/background.png");
   opacity: 0.3;
 }
-
 
 /* ----------------------- Header a footer ----------------------- */
 
@@ -33,79 +34,70 @@ body::before{
   justify-content: space-between;
   align-items: center;
   padding: 25px 60px;
-  background-color: #FDF7F4;
+  background-color: #fdf7f4;
+  font-family: "Asul", sans-serif;
 }
 
 .logo {
-  color: #F8BFA5;
-  font-size: 1.3rem;
+  color: #f8bfa5;
+  font-size: 26px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .nav-links {
   display: flex;
-  gap: 25px;
+  gap: 40px;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #1e1e1e;
-  font-size: 0.95rem;
+  font-size: 16px;
   transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #F8BFA5;
+  color: #f8bfa5;
 }
 
 /* hamburger menu */
 .menu-icon {
   display: none;
   flex-direction: column;
+  justify-content: space-around;
   cursor: pointer;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  overflow: visible;
 }
 
 .menu-icon span {
-  height: 2px;
-  width: 25px;
+  display: block;
+  width: 100%;
+  height: 3px;
   background-color: #1e1e1e;
-  margin: 4px 0;
+  border-radius: 3px;
   transition: all 0.3s ease;
+  transform-origin: center;
 }
 
+/* анимация в крестик */
 .menu-icon.open span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: translateY(10px) rotate(45deg) translatex(-3px);
 }
+
 .menu-icon.open span:nth-child(2) {
   opacity: 0;
+  transform: translateX(-20px);
 }
+
 .menu-icon.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: translateY(-11px) rotate(-45deg) translateX(-4px);
 }
 
-/* responzívne menu */
-@media (max-width: 850px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 30px;
-    background-color: #FDF7F4;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
 
-  .nav-links.active {
-    display: flex;
-  }
-
-  .menu-icon {
-    display: flex;
-  }
-}
 
 /* ----------------------- Footer ----------------------- */
 
@@ -113,6 +105,7 @@ body::before{
   background-color: #f8bfa5;
   color: #fff;
   padding: 40px 80px;
+  font-family: "Asul", sans-serif;
 }
 
 .footer-top {
@@ -123,22 +116,26 @@ body::before{
 }
 
 .footer-left {
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 26px;
   color: #fff;
 }
 
 .footer-right {
   display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.footer-right div {
+  display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 6px;
+  gap: 16px;
 }
 
 .footer-right a {
   text-decoration: none;
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 16px;
   transition: opacity 0.3s;
 }
 
@@ -147,15 +144,17 @@ body::before{
 }
 
 .footer-bottom {
-  border: 1px solid #fff;
-  padding: 14px;
-  border-radius: 2px;
-  text-align: left;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #fff;
+  padding: 30px;
 }
 
 .footer-bottom p {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 16px;
   color: #fff;
 }
 
@@ -188,10 +187,6 @@ body::before{
 }
 /* ----------------------- Rozloženie ----------------------- */
 
-
 /* ----------------------- Zaluby ----------------------- */
 
-
 /* ----------------------- Zmeny ----------------------- */
-
-
