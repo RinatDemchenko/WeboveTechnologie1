@@ -1,28 +1,32 @@
 /* ----------------------- Header a footer ----------------------- */
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 30px;
-    background-color: #fdf7f4;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 30px;
+  background-color: #fdf7f4;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-  .nav-links.active {
-    display: flex;
-  }
+.nav-links.active {
+  display: flex;
+}
 
-  .menu-icon {
-    display: flex;
-  }
+.menu-icon {
+  display: flex;
+}
 
 /* ----------------------- Rozloženie ----------------------- */
 
-
 /* ----------------------- Zaluby ----------------------- */
 
-
 /* ----------------------- Zmeny ----------------------- */
+.zmeny-hero .zmeny-wrap {
+  padding: 36px 16px 24px;
+}
+.zmeny-zoom-bar {
+  gap: 16px;
+}

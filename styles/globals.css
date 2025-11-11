@@ -1,5 +1,5 @@
 /* ----------------------- CSS Reset (Nie je potrebné upravovať) ----------------------- */
-@import url("https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Asul:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 * {
   margin: 0;
@@ -18,12 +18,13 @@ body {
 body::before {
   content: "";
   z-index: -999;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-image: url("../assets/images/background.png");
+  background-position: center;
   opacity: 0.3;
 }
 
@@ -96,8 +97,6 @@ body::before {
 .menu-icon.open span:nth-child(3) {
   transform: translateY(-11px) rotate(-45deg) translateX(-4px);
 }
-
-
 
 /* ----------------------- Footer ----------------------- */
 
@@ -190,3 +189,135 @@ body::before {
 /* ----------------------- Zaluby ----------------------- */
 
 /* ----------------------- Zmeny ----------------------- */
+
+/* Hero blok (centrálny nadpis + podtitul + ovládač veľkosti) */
+
+.zmeny-hero {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial,
+    sans-serif;
+  line-height: 1.6;
+}
+.zmeny-hero .zmeny-wrap {
+  margin: 0 auto;
+  padding: 80px 40px 50px;
+  text-align: center;
+}
+.zmeny-hero h1 {
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 1.2;
+  margin: 0 0 16px;
+  font-weight: 700;
+}
+.zmeny-hero p.zmeny-lead {
+  color: #8e8e8e;
+  margin: 0 auto 40px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Zoom ovládač – „pilulka" с белой обводкой 5px */
+.zmeny-zoom-bar {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: #fdf7f4;
+  border: 5px solid #fff;
+  height: 72px;
+}
+.zmeny-zoom-btn {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+.zmeny-zoom-btn:hover {
+  background: rgba(255, 197, 171, 0.1);
+}
+.zmeny-zoom-btn i {
+  font-size: 30px;
+  color: rgb(255, 197, 171);
+  display: block;
+}
+.zmeny-zoom-select {
+  appearance: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  color: #6f6661;
+  font: inherit;
+  cursor: pointer;
+}
+.zmeny-zoom-select:hover {
+  border-color: rgba(255, 197, 171, 0.4);
+}
+
+/* Zoznam zmien */
+.zmeny-columns {
+  margin: 30px auto;
+  padding: 30px;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial,
+    sans-serif;
+  line-height: 1.6;
+  font-size: calc(1rem * var(--content-zoom, 1));
+}
+.zmeny-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.zmeny-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 30px;
+  color: #6f6661;
+}
+.zmeny-item > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.zmeny-item .zmeny-ico {
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.zmeny-item .zmeny-ico i {
+  font-size: 30px;
+  color: rgb(255, 197, 171);
+  display: block;
+}
+.zmeny-item .zmeny-ico-user i {
+  font-size: 20px;
+}
+.zmeny-item strong {
+  color: #111111;
+}
+.zmeny-item a {
+  color: #ed9f86;
+  text-decoration: none;
+}
+.zmeny-item .zmeny-meta {
+  color: #9b8f88;
+}
+
+.zmeny-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
