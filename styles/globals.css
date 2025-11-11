@@ -84,7 +84,6 @@ body::before {
   transform-origin: center;
 }
 
-/* анимация в крестик */
 .menu-icon.open span:nth-child(1) {
   transform: translateY(10px) rotate(45deg) translatex(-3px);
 }
@@ -96,6 +95,28 @@ body::before {
 
 .menu-icon.open span:nth-child(3) {
   transform: translateY(-11px) rotate(-45deg) translateX(-4px);
+}
+
+@media (max-width: 850px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    background-color: #fdf7f4;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
 }
 
 /* ----------------------- Footer ----------------------- */
@@ -157,7 +178,6 @@ body::before {
   color: #fff;
 }
 
-/* responzivita footera */
 @media (max-width: 850px) {
   .main-footer {
     padding: 30px 25px;
@@ -187,6 +207,132 @@ body::before {
 /* ----------------------- Rozloženie ----------------------- */
 
 /* ----------------------- Zaluby ----------------------- */
+
+.zaluby-main {
+  text-align: center;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial,
+    sans-serif;
+}
+
+.zaluby-main h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: #1c1c1c;
+  margin-bottom: 0.5rem;
+  margin-top:60px
+}
+
+.zaluby-main p {
+  font-size: 0.9rem;
+  color: #6b6b6b;
+  margin-bottom: 2rem;
+}
+
+.zaluby-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+/* Flip карточки */
+.hobby-card {
+  background-color: transparent;
+  width: 320px;
+  height: 380px;
+  padding:20px;
+}
+
+.hobby-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.hobby-card:hover .hobby-card-inner {
+  transform: rotateY(180deg);
+}
+
+.hobby-card-front,
+.hobby-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background: #fff4ef;
+  overflow: hidden;
+}
+
+/* Predná strana */
+.hobby-card-front {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1.5rem 1rem;
+}
+
+.hobby-card-front img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  margin-bottom: 1rem;
+}
+
+.hobby-card-front h2,
+.hobby-card-front h3 {
+  text-align: left;
+  width: 100%;
+  padding-left: 0.5rem;
+}
+
+.hobby-card-front h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.4rem;
+}
+
+.hobby-card-front h3 {
+  font-size: 0.85rem;
+  color: #777;
+  font-weight: 400;
+}
+
+/* Zadná strana */
+.hobby-card-back {
+  background-color: #fff4ef;
+  color: #333;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.2rem;
+  text-align: center;
+}
+
+.hobby-card-back h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #222;
+}
+
+.hobby-card-back p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 90%;
+  word-wrap: break-word;
+  color: #555;
+}
 
 /* ----------------------- Zmeny ----------------------- */
 

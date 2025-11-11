@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Skupina 3</title>
     <link rel="stylesheet" href="styles/globals.css" />
+    <script src="scripts/responsive-loader.js"></script>
     <script src="scripts/nav.js" defer></script>
   </head>
   <body>
@@ -22,36 +23,90 @@
       </div>
     </header>
 
-    <main class="main-content">
-      <section class="zaluby-section">
-        <h1>Záľuby členov tímu</h1>
-        <p>
-          Na tejto stránke sú predstavené záľuby jednotlivých členov nášho tímu.
-        </p>
-        <div class="zaluby-list">
-          <div class="zaluba">
-            <h2>Člen 1</h2>
-            <p>
-              Rád fotí a venuje sa úpravám videí. Vo voľnom čase sa venuje
-              turistike a tvorbe krátkych filmov.
-            </p>
-          </div>
-          <div class="zaluba">
-            <h2>Člen 2</h2>
-            <p>
-              Jeho záľubou je programovanie a tvorba hier. Zaujíma sa o moderné
-              technológie a AI.
-            </p>
-          </div>
-          <div class="zaluba">
-            <h2>Člen 3</h2>
-            <p>
-              Miluje šport, najmä futbal a cyklistiku. Vo voľnom čase sa venuje
-              zdravej výžive.
-            </p>
+    <main class="zaluby-main">
+      <h2>Záľuby členov tímu</h2>
+      <p>Spoznajte záujmy a koníčky našich členov</p>
+
+      <div class="zaluby-grid">
+        <!-- Tomáš Ferko -->
+        <div class="hobby-card">
+          <div class="hobby-card-inner">
+            <div class="hobby-card-front">
+              <img src="assets/images/hobby1.jpg" alt="Tomáš Ferko" />
+              <h2>Tomáš Ferko</h2>
+              <h3>Behanie, hudba, MilSim hry, autá</h3>
+            </div>
+            <div class="hobby-card-back">
+              <h3>Tomáš Ferko</h3>
+              <p>Behanie, hudba, MilSim hry, autá</p>
+            </div>
           </div>
         </div>
-      </section>
+
+        <!-- Filip Mikulák -->
+        <div class="hobby-card">
+          <div class="hobby-card-inner">
+            <div class="hobby-card-front">
+              <img src="assets/images/hobby2.jpg" alt="Filip Mikulák" />
+              <h2>Filip Mikulák</h2>
+              <h3>
+                Bedminton, Posilňovanie, Cyklistika, Hranie počítačových hier
+              </h3>
+            </div>
+            <div class="hobby-card-back">
+              <h3>Filip Mikulák</h3>
+              <p>
+                Bedminton, Posilňovanie, Cyklistika, Hranie počítačových hier
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rinat Demchenko -->
+        <div class="hobby-card">
+          <div class="hobby-card-inner">
+            <div class="hobby-card-front">
+              <img src="assets/images/hobby3.jpg" alt="Rinat Demchenko" />
+              <h2>Rinat Demchenko</h2>
+              <h3>Elektronika</h3>
+            </div>
+            <div class="hobby-card-back">
+              <h3>Rinat Demchenko</h3>
+              <p>Elektronika</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Samuel Dzurina -->
+        <div class="hobby-card">
+          <div class="hobby-card-inner">
+            <div class="hobby-card-front">
+              <img src="assets/images/hobby4.jpg" alt="Samuel Dzurina" />
+              <h2>Samuel Dzurina</h2>
+              <h3>Tenis, basketbal, enduro bicyklovanie a hranie hier</h3>
+            </div>
+            <div class="hobby-card-back">
+              <h3>Samuel Dzurina</h3>
+              <p>Tenis, basketbal, enduro bicyklovanie a hranie hier</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Michal Baldovič -->
+        <div class="hobby-card">
+          <div class="hobby-card-inner">
+            <div class="hobby-card-front">
+              <img src="assets/images/hobby5.jpg" alt="Michal Baldovič" />
+              <h2>Michal Baldovič</h2>
+              <h3>Plávanie, hry, komunikácia s ľuďmi</h3>
+            </div>
+            <div class="hobby-card-back">
+              <h3>Michal Baldovič</h3>
+              <p>Plávanie, hry, komunikácia s ľuďmi</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="main-footer">
@@ -71,7 +126,5 @@
         <p>© 2025 Webové technológie skupina 3, FEI, KEMT</p>
       </div>
     </footer>
-
-    <script src="scripts/nav.js"></script>
   </body>
 </html>

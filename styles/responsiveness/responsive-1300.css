@@ -3,6 +3,11 @@
 /* ----------------------- Rozloženie ----------------------- */
 
 /* ----------------------- Zaluby ----------------------- */
+.zaluby-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 80px 40px 120px 40px;
+}
 
 /* ----------------------- Zmeny ----------------------- */
 .zmeny-columns {
