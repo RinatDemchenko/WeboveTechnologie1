@@ -28,15 +28,9 @@
 }
 
 .hobby-card {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  border-radius: 12px;
   transition: all 0.3s ease;
 }
 
-.hobby-card:hover {
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
-  transform: translateY(-8px);
-}
 
 /* ----------------------- Zmeny ----------------------- */
 
