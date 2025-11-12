@@ -91,6 +91,7 @@
   gap: 10px;
   padding: 30px;
   color: #6f6661;
+  transition: all 0.3s ease;
 }
 .zmeny-item > div {
   display: flex;
@@ -104,12 +105,13 @@
   justify-content: center;
 }
 .zmeny-item .zmeny-ico i {
-  font-size: 30px;
+  font-size: calc(30px * var(--content-zoom, 1));
   color: rgb(255, 197, 171);
   display: block;
 }
 .zmeny-item .zmeny-ico-user i {
-  font-size: 20px;
+  font-size: calc(20px * var(--content-zoom, 1));
+  transition: all 0.2s ease;
 }
 .zmeny-item strong {
   color: #111111;

@@ -34,10 +34,6 @@
 
 /* ----------------------- Zmeny ----------------------- */
 
-.zmeny-item {
-  transition: all 0.3s ease;
-}
-
 .zmeny-item:hover {
   transform: translateX(6px);
   background: linear-gradient(
