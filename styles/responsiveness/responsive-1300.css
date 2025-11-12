@@ -51,8 +51,3 @@
   grid-template-columns: auto 1fr;
   transition: all 0.2s ease;
 }
-
-.zmeny-item:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  transform: translateX(4px);
-}
