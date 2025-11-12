@@ -1,11 +1,12 @@
 (function () {
   const SECTION = document.querySelector('.zmeny-columns');
+  console.log('SECTION found:', SECTION);
   if (!SECTION) return;
 
   const LS_KEY = 'sekcia_zmena_zoom';
   const LIVE = document.getElementById('zoom-live');
 
-  const MIN = 0.85, MAX = 1.6, STEP = 0.15;
+  const MIN = 0.7, MAX = 1.6, STEP = 0.15;
   let zoom = readInitialZoom();
 
   applyZoom(zoom, { announce: false });
@@ -57,7 +58,9 @@
   }
 
   function applyZoom(val, { announce = true } = {}) {
+    console.log(document.querySelector('.zmeny-columns').style.getPropertyValue('--content-zoom'));
     SECTION.style.setProperty('--content-zoom', val);
+    console.log(getComputedStyle(document.querySelector('.zmeny-columns')).fontSize);
     SECTION.setAttribute('data-zoom', String(val));
 
     const selectEl = document.getElementById('zoom-select');

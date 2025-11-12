@@ -1,6 +1,33 @@
-/* ----------------------- Header a footer ----------------------- */
+/* ----------------------- Rozloženie (Index page) ----------------------- */
 
-/* ----------------------- Rozloženie ----------------------- */
+.hero-image img {
+  border-radius: 80px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hero-image img:hover {
+  transform: translateY(-8px);
+}
+
+.image-pozadie {
+  border-radius: 80px;
+  filter: blur(1px);
+}
+
+.clenovia-flex {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.member-item {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.member-item:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
 
 /* ----------------------- Zaluby ----------------------- */
 .zaluby-grid {
@@ -9,11 +36,23 @@
   padding: 80px 40px 120px 40px;
 }
 
-/* ----------------------- Zmeny ----------------------- */
-.zmeny-columns {
-  grid-template-columns: 1fr;
-  gap: 16px;
+.hobby-card {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease;
 }
+
+.hobby-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* ----------------------- Zmeny ----------------------- */
+
 .zmeny-item {
   grid-template-columns: auto 1fr;
+  transition: all 0.2s ease;
+}
+
+.zmeny-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateX(4px);
 }

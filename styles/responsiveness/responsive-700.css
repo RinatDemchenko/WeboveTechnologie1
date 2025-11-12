@@ -1,16 +1,19 @@
-/* ----------------------- Header a footer ----------------------- */
+/* ----------------------- Rozloženie (Index page) ----------------------- */
 
-.footer-top {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+.hero-image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
 }
 
-.footer-right {
-  align-items: center;
+.image-pozadie {
+  display: none;
 }
 
-/* ----------------------- Rozloženie ----------------------- */
+.clenovia-flex {
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+}
 
 /* ----------------------- Zaluby ----------------------- */
 .zaluby-grid {
@@ -23,3 +26,6 @@
 }
 
 /* ----------------------- Zmeny ----------------------- */
+.zmeny-hero .zmeny-wrap {
+  padding: 40px 16px 30px;
+}

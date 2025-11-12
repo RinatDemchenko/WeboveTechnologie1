@@ -1,8 +1,24 @@
 /* ----------------------- Header a footer ----------------------- */
 
-
-
 /* ----------------------- Rozloženie ----------------------- */
+
+
+
+.clenovia-flex {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.member-item {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  backdrop-filter: blur(4px);
+}
+
+.member-item:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  transform: translateY(-6px) scale(1.02);
+}
 
 /* ----------------------- Zaluby ----------------------- */
 .zaluby-grid {
@@ -11,4 +27,28 @@
   padding: 100px 50px 150px 50px;
 }
 
+.hobby-card {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.hobby-card:hover {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+}
+
 /* ----------------------- Zmeny ----------------------- */
+
+.zmeny-item {
+  transition: all 0.3s ease;
+}
+
+.zmeny-item:hover {
+  transform: translateX(6px);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+}

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Skupina 3</title>
     <link rel="stylesheet" href="styles/globals.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script src="scripts/responsive-loader.js"></script>
     <script src="scripts/nav.js" defer></script>
   </head>
@@ -24,15 +26,134 @@
     </header>
 
     <main class="main-content">
-      <section class="intro">
-        <h1>Vitajte na stránke skupiny 3</h1>
-        <p>
-          Táto stránka bola vytvorená v rámci projektu z predmetu Webové
-          technológie.
+      <section class="hero-section container">
+        <div class="hero-content">
+          <small class="greeting-text">
+            <i class="ph ph-star-four"></i>
+            Vitajte na webovej stránke
+          </small>
+          <h1>Skupiny 3</h1>
+          <p>
+            Tím študentov zaangažovaných v tvorbe moderných a responzívnych webových stránok. Spolu sme vytvorili projekt, ktorý spája dizajn, vývoj a kreatívne riešenia.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="zaluby.html" class="btn">
+              Hobby tímu
+              <i class="ph ph-sparkle"></i>
+            </a>
+            <a href="zmeny.html" class="btn btn-alt">
+              Zoznam zmien
+              <i class="ph ph-flask"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img src="assets/images/landing.jpg" alt="Jesenné lístie" />
+          <div class="image-pozadie"></div>
+        </div>
+      </section>
+
+      <section class="ponukame container">
+        <h2>Čo sme sa naučili</h2>
+        <p class="section-subtitle">
+          Počas práce na tomto projekte sme získali cenné skúsenosti a znalosti
         </p>
-        <p>
-          Prezrite si rozloženie stránky, vykonané zmeny a záľuby členov tímu.
+
+        <div class="ponukame-grid">
+          <div class="offer-box">
+            <div class="icon-wrapper">
+              <i class="ph ph-palette"></i>
+            </div>
+            <h3>Webový dizajn</h3>
+            <p>
+              Naučili sme sa vytvárať moderné a prehľadné webové rozhrania s
+              dôrazom na používateľskú skúsenosť a estetiku dizajnu
+            </p>
+          </div>
+
+          <div class="offer-box">
+            <div class="icon-wrapper">
+              <i class="ph ph-users-three"></i>
+            </div>
+            <h3>Práca v tíme</h3>
+            <p>
+              Získali sme skúsenosti s tímovou prácou, koordináciou úloh pomocou
+              Gitu a efektívnou komunikáciou medzi členmi skupiny pri vývoji
+              projektu
+            </p>
+          </div>
+
+          <div class="offer-box">
+            <div class="icon-wrapper">
+              <i class="ph ph-layout"></i>
+            </div>
+            <h3>Vývoj webových stránok</h3>
+            <p>
+              Naučili sme sa programovať a vytvárať plne funkčné webové stránky
+              pomocou HTML, CSS a JavaScriptu
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="clenovia container">
+        <h2>Členovia nášho tímu</h2>
+        <p class="section-subtitle">
+          Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+          ipsum
         </p>
+
+        <div class="clenovia-flex">
+          <div class="member-item">
+            <img
+              src="https://images.unsplash.com/photo-1722503583962-fb0622b436c2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171"
+              alt="Rinat Demchenko"
+            />
+            <div class="overlay-text">
+              <h4>Rinat Demchenko</h4>
+              <p>Webový dizajn a kontroľa verzií</p>
+            </div>
+          </div>
+          <div class="member-item">
+            <img src="https://images.unsplash.com/photo-1628258334105-2a0b3d6efee1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687" alt="Tomáš Ferko" />
+            <div class="overlay-text">
+              <h4>Tomáš Ferko</h4>
+              <p>Header a Footer stránky</p>
+            </div>
+          </div>
+          <div class="member-item">
+            <img
+              src="https://images.unsplash.com/photo-1508830524289-0adcbe822b40?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1125"
+              alt="Samuel Džurina"
+            />
+            <div class="overlay-text">
+              <h4>Samuel Džurina</h4>
+              <p>Stránka Rozloženie</p>
+            </div>
+          </div>
+          <div class="member-item">
+            <img
+              src="https://images.unsplash.com/photo-1542546068979-b6affb46ea8f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687"
+              alt="Michal Baldovič"
+            />
+            <div class="overlay-text">
+              <h4>Michal Baldovič</h4>
+              <p>Stránka Záľuby a Responsive Loader</p>
+            </div>
+          </div>
+          <div class="member-item">
+            <img
+              src="https://images.unsplash.com/photo-1555066931-bf19f8fd1085?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171"
+              alt="Filip Mikulák"
+            />
+            <div class="overlay-text">
+              <h4>Filip Mikulák</h4>
+              <p>Stránka Zmeny</p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 

@@ -1,6 +1,18 @@
-/* ----------------------- Header a footer ----------------------- */
+/* ----------------------- Rozloženie (Index page) ----------------------- */
 
-/* ----------------------- Rozloženie ----------------------- */
+.hero-image img {
+  width: 400px;
+  height: 400px;
+}
+
+.image-pozadie {
+  display: none;
+}
+
+.clenovia-flex {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
 
 /* ----------------------- Zaluby ----------------------- */
 .zaluby-grid {

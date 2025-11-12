@@ -37,6 +37,10 @@ body::before {
   padding: 25px 60px;
   background-color: #fdf7f4;
   font-family: "Asul", sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
@@ -204,266 +208,209 @@ body::before {
     font-size: 0.8rem;
   }
 }
-/* ----------------------- Rozloženie ----------------------- */
 
-/* ----------------------- Zaluby ----------------------- */
+/* ----------------------- Media queries ----------------------- */
 
-.zaluby-main {
-  text-align: center;
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial,
-    sans-serif;
-}
+@media (max-width: 1300px) {
+  .hero-section {
+    padding: 90px 40px;
+    gap: 55px;
+  }
 
-.zaluby-main h2 {
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 700;
-  color: #1c1c1c;
-  margin-bottom: 0.5rem;
-  margin-top:60px
-}
+  .hero-content h1 {
+    font-size: 64px;
+  }
 
-.zaluby-main p {
-  font-size: 0.9rem;
-  color: #6b6b6b;
-  margin-bottom: 2rem;
-}
+  .hero-image img {
+    width: 380px;
+    height: 550px;
+  }
 
-.zaluby-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
-  justify-items: center;
-}
+  .image-pozadie {
+    width: 350px;
+    height: 520px;
+  }
 
-/* Flip карточки */
-.hobby-card {
-  background-color: transparent;
-  width: 320px;
-  height: 380px;
-  padding:20px;
-}
+  .ponukame {
+    padding: 90px 40px;
+  }
 
-.hobby-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s ease;
-  transform-style: preserve-3d;
+  .ponukame h2 {
+    font-size: 54px;
+  }
+
+  .clenovia {
+    padding: 90px 40px;
+  }
+
+  .clenovia h2 {
+    font-size: 54px;
+  }
+
+  .clenovia-flex {
+    gap: 28px;
+  }
 }
 
-.hobby-card:hover .hobby-card-inner {
-  transform: rotateY(180deg);
+@media (max-width: 900px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-right {
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+
+  .hero-section {
+    flex-direction: column;
+    padding: 60px 20px;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .hero-content p {
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .btn {
+    justify-content: center;
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+  }
+
+  .hero-image img:hover {
+    transform: scale(1.02);
+  }
+
+  .image-pozadie {
+    width: 90%;
+    height: 90%;
+    right: -30px;
+  }
+
+  .ponukame {
+    padding: 60px 20px;
+  }
+
+  .ponukame h2 {
+    font-size: 40px;
+  }
+
+  .section-subtitle {
+    margin-bottom: 60px;
+  }
+
+  .ponukame-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .clenovia {
+    padding: 60px 20px;
+  }
+
+  .clenovia h2 {
+    font-size: 40px;
+  }
+
+  .clenovia-flex {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .member-item {
+    height: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-radius: 10px;
+  }
+
+  .member-item:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+  }
+
+  .hobby-card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+  }
+
+  .zmeny-item {
+    transition: box-shadow 0.2s ease;
+  }
+
+  .zmeny-zoom-bar {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
 }
 
-.hobby-card-front,
-.hobby-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 0;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  background: #fff4ef;
-  overflow: hidden;
-}
+@media (max-width: 700px) {
+  .ponukame {
+    padding: 60px 20px;
+  }
 
-/* Predná strana */
-.hobby-card-front {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 1.5rem 1rem;
-}
+  .ponukame h2 {
+    font-size: 32px;
+  }
 
-.hobby-card-front img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 5px;
-  background-color: #f0f0f0;
-  margin-bottom: 1rem;
-}
+  .ponukame-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 
-.hobby-card-front h2,
-.hobby-card-front h3 {
-  text-align: left;
-  width: 100%;
-  padding-left: 0.5rem;
-}
+  .hobby-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+  }
 
-.hobby-card-front h2 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #222;
-  margin-bottom: 0.4rem;
-}
+  .zmeny-item {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+  }
 
-.hobby-card-front h3 {
-  font-size: 0.85rem;
-  color: #777;
-  font-weight: 400;
-}
+  .zmeny-zoom-bar {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
 
-/* Zadná strana */
-.hobby-card-back {
-  background-color: #fff4ef;
-  color: #333;
-  transform: rotateY(180deg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 1.2rem;
-  text-align: center;
-}
+  .footer-right {
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+  }
 
-.hobby-card-back h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.8rem;
-  color: #222;
-}
-
-.hobby-card-back p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  max-width: 90%;
-  word-wrap: break-word;
-  color: #555;
-}
-
-/* ----------------------- Zmeny ----------------------- */
-
-/* Hero blok (centrálny nadpis + podtitul + ovládač veľkosti) */
-
-.zmeny-hero {
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial,
-    sans-serif;
-  line-height: 1.6;
-}
-.zmeny-hero .zmeny-wrap {
-  margin: 0 auto;
-  padding: 80px 40px 50px;
-  text-align: center;
-}
-.zmeny-hero h1 {
-  font-size: clamp(40px, 5vw, 72px);
-  line-height: 1.2;
-  margin: 0 0 16px;
-  font-weight: 700;
-}
-.zmeny-hero p.zmeny-lead {
-  color: #8e8e8e;
-  margin: 0 auto 40px;
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-/* Zoom ovládač – „pilulka" с белой обводкой 5px */
-.zmeny-zoom-bar {
-  display: inline-flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: space-around;
-  padding: 12px 20px;
-  border-radius: 12px;
-  background: #fdf7f4;
-  border: 5px solid #fff;
-  height: 72px;
-}
-.zmeny-zoom-btn {
-  appearance: none;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  padding: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  transition: background 0.2s ease;
-}
-.zmeny-zoom-btn:hover {
-  background: rgba(255, 197, 171, 0.1);
-}
-.zmeny-zoom-btn i {
-  font-size: 30px;
-  color: rgb(255, 197, 171);
-  display: block;
-}
-.zmeny-zoom-select {
-  appearance: none;
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: #fff;
-  color: #6f6661;
-  font: inherit;
-  cursor: pointer;
-}
-.zmeny-zoom-select:hover {
-  border-color: rgba(255, 197, 171, 0.4);
-}
-
-/* Zoznam zmien */
-.zmeny-columns {
-  margin: 30px auto;
-  padding: 30px;
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial,
-    sans-serif;
-  line-height: 1.6;
-  font-size: calc(1rem * var(--content-zoom, 1));
-}
-.zmeny-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.zmeny-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  padding: 30px;
-  color: #6f6661;
-}
-.zmeny-item > div {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.zmeny-item .zmeny-ico {
-  width: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.zmeny-item .zmeny-ico i {
-  font-size: 30px;
-  color: rgb(255, 197, 171);
-  display: block;
-}
-.zmeny-item .zmeny-ico-user i {
-  font-size: 20px;
-}
-.zmeny-item strong {
-  color: #111111;
-}
-.zmeny-item a {
-  color: #ed9f86;
-  text-decoration: none;
-}
-.zmeny-item .zmeny-meta {
-  color: #9b8f88;
-}
-
-.zmeny-visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
 }
