@@ -37,6 +37,7 @@
   padding: 0;
   display: flex;
   flex-direction: column;
+  border:white solid 5px;
 }
 
 .hobby-card-inner {
